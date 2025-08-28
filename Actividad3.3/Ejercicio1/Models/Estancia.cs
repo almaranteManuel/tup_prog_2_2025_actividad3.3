@@ -48,6 +48,6 @@ public class Estancia
         {
             return campos.Count;
         }
-        
+        return 0;
     }
 }

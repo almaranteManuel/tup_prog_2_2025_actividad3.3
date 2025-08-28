@@ -20,4 +20,9 @@ internal class Campo : IComparable
         }
         return 1;
     }
+
+    public override string ToString()
+    {
+        return $"{Identificador} ({Superficie})";
+    }
 }
