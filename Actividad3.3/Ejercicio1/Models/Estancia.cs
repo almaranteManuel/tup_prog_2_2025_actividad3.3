@@ -26,4 +26,28 @@ public class Estancia
         puestos.Add(campo);
     }
 
+    public Campo AgregarCampos(string identificador, double superficie)
+    {
+        Campo campo = new Campo(identificador, superficie);
+        campos.Add(campo);
+        return campo;
+    }
+
+    public Campo VerCampo(int idx)
+    {
+        if (idx >= 0 && idx < campos.Count && campos!=null)
+        {
+            return campos[idx] as Campo;
+        }
+        return null;
+    }
+
+    public int VerCantidadCampos()
+    {
+        if( campos !=null )
+        {
+            return campos.Count;
+        }
+        
+    }
 }

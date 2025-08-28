@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio1.Models;
 
-internal class Campo
+internal class Campo : IComparable
 {
     public string Identificador { get; set; }
     public double Superficie { get; set; }
@@ -9,5 +9,15 @@ internal class Campo
     {
         this.Identificador = id;
         this.Superficie = superficie;
+    }
+
+    public int CompareTo(object? otro)
+    {
+        Campo otroCampo = otro as Campo;
+        if (otroCampo != null)
+        {
+            return Identificador.CompareTo(otroCampo.Identificador);
+        }
+        return 1;
     }
 }
